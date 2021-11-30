@@ -1,0 +1,30 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/junit/junit
+    testImplementation 'junit:junit:4.13.2'
+
+    implementation fileTree(dir: "lib", include: "asunit.jar")
+    implementation fileTree(dir: "lib", include: "jason.jar")
+    implementation fileTree(dir: "lib", include: "jasonenv.jar")
+    implementation fileTree(dir: "lib", include: "jempplan.jar")
+    implementation fileTree(dir: "lib", include: "javagp.jar")
+    implementation fileTree(dir: "lib", include: "peleus.jar")
+    //implementation fileTree(dir: 'lib', include: '*.jar')
+}
+
+// sourceSets {
+//     main {
+// 	java {
+// 	    srcDir 'src'
+// 	}
+//     }
+// }
+
+// Run with: $ gradle run --args="examples/Peleus.mas2j"
+mainClassName = "jason.infra.centralised.RunCentralisedMAS"
