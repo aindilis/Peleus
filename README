@@ -1,3 +1,31 @@
+CAUTION: NOT YET WORKING.
+
+This is an attempt to backport my Jason/AgentSpeak(L)<->SWIPL adapter
+to work with Peleus (from 2007).  As of [2022-10-28,11:01:01], I
+haven't yet figured out how to get the Environment to load:
+
+```
+andrewdo@ai2:/var/lib/myfrdcsa/collaborative/git/Peleus$ ./run-executive-function.sh 
+[CentralisedEnvironment] Error in Centralised MAS environment creation
+java.lang.ClassNotFoundException: org.frdcsa.ExecutiveFunctionAdapterEnv
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:636)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:182)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:519)
+	at jason.infra.centralised.CentralisedEnvironment.<init>(CentralisedEnvironment.java:32)
+	at jason.infra.centralised.RunCentralisedMAS.createEnvironment(RunCentralisedMAS.java:374)
+	at jason.infra.centralised.RunCentralisedMAS.create(RunCentralisedMAS.java:186)
+	at jason.infra.centralised.RunCentralisedMAS.main(RunCentralisedMAS.java:74)
+
+Exception in thread "main" jason.JasonException: The user environment class instantiation 'org.frdcsa.ExecutiveFunctionAdapterEnv' has failed!org.frdcsa.ExecutiveFunctionAdapterEnv
+	at jason.infra.centralised.CentralisedEnvironment.<init>(CentralisedEnvironment.java:37)
+	at jason.infra.centralised.RunCentralisedMAS.createEnvironment(RunCentralisedMAS.java:374)
+	at jason.infra.centralised.RunCentralisedMAS.create(RunCentralisedMAS.java:186)
+	at jason.infra.centralised.RunCentralisedMAS.main(RunCentralisedMAS.java:74)
+andrewdo@ai2:/var/lib/myfrdcsa/collaborative/git/Peleus$ 
+```
+
+---
+
 Peleus is an implementation of an AgentSpeak agent interpreter 
 based on the Jason implementation, with the addition of a STRIPS 
 planning module. The connection between AgentSpeak and the planning 

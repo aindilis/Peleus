@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Implementation-Version: Thu Dec 15 10:12:07 BRST 2016
+Specification-Title: Jason Enviornment
+Specification-Version: 2.1
+Main-Class: org.frdcsa.ExecutiveFunctionAdapterEnv

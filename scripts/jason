@@ -1,0 +1,6 @@
+#!/bin/bash
+
+source "`dirname "$0"`/jason-setup"
+
+# /usr/lib/jvm/adoptopenjdk-16-hotspot-amd64/bin/java -cp ./lib/peleus.jar:./lib/jemplan.jar:./lib/jason.jar jason.infra.centralised.RunCentralisedMAS examples/Peleus.mas2j -debug
+/usr/lib/jvm/adoptopenjdk-16-hotspot-amd64/bin/java -cp ./examples/executive-function-adapter/src/java/ExecutiveFunctionAdapterEnv.jar:./lib/peleus.jar:./lib/jemplan.jar:./lib/jason.jar jason.infra.centralised.RunCentralisedMAS $*
