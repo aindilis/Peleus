@@ -1,0 +1,12 @@
+/* Jason Project */
+/* Not yet functioning, simply copied over from Peleus.mas2j */
+
+MAS softbot {
+	infrastructure:
+		Centralised
+	agents:
+		softbot;
+	aslSourcePath:
+		"examples/softbot";
+}
+

@@ -5,7 +5,7 @@
 MAS executivefunctionadapter {
 
     environment:
-      org.frdcsa.ExecutiveFunctionAdapterEnv
+      jason.environment.ExecutiveFunctionAdapterEnv
 
     // synchronise the execution: an agent only
     // starts its next reasoning cycle when all others
