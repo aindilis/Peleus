@@ -14,4 +14,5 @@
 # export JASON_HOME=/var/lib/myfrdcsa/sandbox/jason-20211129/jason-20211129/build
 
 # gradle run --args="examples/Peleus.mas2j"
-/usr/lib/jvm/adoptopenjdk-16-hotspot-amd64/bin/java -cp ./lib/peleus.jar:./lib/jemplan.jar:./lib/jason.jar jason.infra.centralised.RunCentralisedMAS examples/Peleus.mas2j -debug
+
+/usr/lib/jvm/adoptopenjdk-16-hotspot-amd64/bin/java -cp ./lib/asunit.jar:./lib/jasonenv.jar:./lib/jason.jar:./lib/javagp.jar:./lib/jemplan.jar:./lib/peleus.jar jason.infra.centralised.RunCentralisedMAS examples/Peleus.mas2j # -debug

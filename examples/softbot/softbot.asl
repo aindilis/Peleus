@@ -35,27 +35,27 @@ des([on(b3, table), on(b2, b3), on(b1, b2)]).
 @p3[atomic]+!checkGoals(H) : true <-
 	.print("Checking ", H);
   	org.soton.peleus.act.isTrue(H).
-	
+
 -!checkGoals([H|T]) : true <- .print("Failure.").
 
 @action1(block, block)[] +!moveToTable (Block, From) : 
 	Block \== From & Block \== table & 
 	From \== table & clear(Block) & on(Block, From) <- 
-	-on(Block, From);
-    +on(Block, table);
-    +clear(From);
-    .print("Now ", Block, " is on the table. ",From, " is clear.").	
+		-on(Block, From);
+		+on(Block, table);
+		+clear(From);
+		.print("Now ", Block, " is on the table. ",From, " is clear.").	
 
 @action2(block, block, block) +!move(Block, From, To) : 
 	Block \== From & Block \== To &
 	From \== To & To \== table &
 	on(Block, From) & clear(Block) &
 	clear(To) <- 
-	-on(Block, From);
-	-clear(To);
-	+on(Block, To);
-	+clear(From);
-	.print("Now ", Block, " is on ", To, ". ",From, " is clear.").
+		-on(Block, From);
+		-clear(To);
+		+on(Block, To);
+		+clear(From);
+		.print("Now ", Block, " is on ", To, ". ",From, " is clear.").
 
 -on(Block, From) <- 
 	.print("Removing belief on(",Block,",",From,")").
